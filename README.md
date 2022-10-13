@@ -1,3 +1,22 @@
+## Feladat kezelő Laravel alkalmazás
+
+A projekt beüzemeléséhez az alábbi lépéseket kell megtenni:
+
+- a projekt leklónozása után létre kell hozni egy adatbázist egy tetszőleges néven (pl.: ea_task_manager)
+- létre kell hozni egy .env file-t a .env.example file leklónozásával és átnevezésével
+- az .env file-ban azt a nevet be kell állítanunk a DB_DATABASE-nek amit az első lépésben választottunk, illetve alatta (DB_USERNAME, DB_PASSWORD) meg kell adnunk az adatbázis hozzáférésünket
+- console-ban futtatnunk kell az alábbi parancsot: "php artisan migrate", ezzel létrehozzunk az adatbázis megfelelő szerkezetét
+- az alkalmazás innentől tulajdonképpen működőképes: lehet új user-t regisztrálni és vele belépni, de ha teszt adatokat is szeretnénk az adatbázisba, akkor: "php artisan db:seed"
+    - a tesztadatok tartalmaznak feladatokat és két usert
+    - első user belépőadatai:
+        - username: johndoe
+        - jelszó: 12345678
+    - második user belépőadatai:
+        - username: janedoe
+        - jelszó: 12345678
+
+- ezek után még futtatnunk kell: "npm install && npm run dev", majd egy másik konzol ablakban elindítjuk a szervert: "php artisan serve" és a http://127.0.0.1:8000 címen elérhetővé válik az alkalmazás
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
